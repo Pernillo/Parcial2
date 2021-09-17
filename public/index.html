@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parcial 2</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- nav bar-->
+  <nav class="navbar">
+    <img src="img/logo.png" class="logo" alt="" />
+    <div class="join-box">
+      <p class="join-msg">Ilimitado TV shows & Pelis</p>
+      <button class="btn join-btn" type="button"  onclick= "location.href='indexseries.html'"> 
+        SERIES DE TELEVISION 
+     </button>
+      <button class="btn">Ingresar</button>
+    </div>
+  </nav>
+
+  <!-- SEccion principal-->
+  <header class="main">
+    <h1 class="heading">Pelis</h1>
+    <p class="info">
+      Las mejores pelis de la Red, series y cosas para quitar el tiempo,
+      todo esta aqui
+    </p>
+    <div class="contentFilter">
+      <h1 id="titleFiltro">Configuracion de filtros</h1>
+      <!-- Listado de genero -->
+      <div id="groupCheckbox">
+        <h3>Seleccione los generos</h3>
+        <hr>
+        <div id="generos"></div>
+      </div>
+
+      <div id="otrosFiltros">
+        <h3>Otros filtros</h3>
+        <hr>
+        <label  class="label" for="busqueda">Buscar:</label>
+        <input class="inputs"  type="text" id="busqueda" value="">
+        <label  class="label" for="anioLanzamiento3">Año de lanzamiento:</label>
+        <input class="inputs"  type="text" id="anioLanzamiento" maxlength="4" value="">
+        <label class="label" for="Clasificiion">Clasificación: </label>
+        <select class="inputs fondonegro"  id="Clasificiion">
+          <option value="0" disabled selected>Seleccione una casificación...</option>
+        </select>
+        <label class="label" for="adultMejorCalificada">Adultos mejor calificadas: </label>
+        <input type="checkbox" id="adultMejorCalificada" name="adultMejorCalificada" value="37">
+
+        <label class="label" for="peliculasCine">Peliculas en el Cine: </label>
+        <input type="checkbox" id="peliculasCine" name="peliculasCine" value="0">
+      </div>
+      <button class="btn join-btn" type="button"  onclick= "correrFiltro()"> 
+       FILTRAR PELICULAS 
+     </button>
+    </div>
+    <div class="mainListMovies"></div>
+  </header>
+
+  <!-- se hacen la referncia a los JS en este orden -->
+  <script src="js/api.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/scroll.js"></script>
+</body>
+
+</html>
